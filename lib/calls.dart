@@ -18,14 +18,66 @@ class Calls extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-
-            // Masukkan Coding disini jangan rubah lainnya
-            //
-            //
-            //
-            //
-            //
-            //
+            callCard(
+              "alfian",
+              Icons.call_made,
+              Colors.green,
+              "Mei 31, 07:00",
+            ),
+            callCard(
+              "082576987456",
+              Icons.call_made,
+              Colors.green,
+              "Mei 31, 07:00",
+            ),
+            callCard(
+              "tono",
+              Icons.call_missed,
+              Colors.red,
+              "Mei 31, 07:00",
+            ),
+            callCard(
+              "tini",
+              Icons.call_made,
+              Colors.green,
+              "Mei 31, 07:00",
+            ),
+            callCard(
+              "087456325456",
+              Icons.call_made,
+              Colors.green,
+              "Mei 31, 07:00",
+            ),
+            callCard(
+              "budi",
+              Icons.call_made,
+              Colors.green,
+              "Mei 31, 07:00",
+            ),
+            callCard(
+              "anton",
+              Icons.call_missed,
+              Colors.red,
+              "Mei 31, 07:00",
+            ),
+            callCard(
+              "aku 1",
+              Icons.call_made,
+              Colors.green,
+              "Mei 31, 07:00",
+            ),
+            callCard(
+              "rama",
+              Icons.call_made,
+              Colors.green,
+              "Mei 31, 07:00",
+            ),
+            callCard(
+              "08796547896",
+              Icons.call_missed,
+              Colors.red,
+              "Mei 31, 07:00",
+            ),
           ],
         ),
       ),
@@ -53,6 +105,44 @@ class Calls extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget callCard(
+      String name, IconData iconData, Color iconColor, String time) {
+    return Card(
+      margin: EdgeInsets.only(bottom: 0.5),
+      child: ListTile(
+        leading: CircleAvatar(
+          backgroundImage: NetworkImage(
+              "https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg"),
+          radius: 30,
+        ),
+        title: Text(
+          name,
+          style: TextStyle(fontWeight: FontWeight.w500),
+        ),
+        subtitle: Row(
+          children: [
+            Icon(
+              iconData,
+              color: iconColor,
+            ),
+            SizedBox(
+              width: 6,
+            ),
+            Text(
+              time,
+              style: TextStyle(fontSize: 12.8),
+            )
+          ],
+        ),
+        trailing: Icon(
+          Icons.call,
+          size: 28,
+          color: Colors.teal,
+        ),
       ),
     );
   }
